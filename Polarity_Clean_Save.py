@@ -34,8 +34,8 @@ def ready_data(candidate_df):
     candidate_df['country'] = candidate_df['country'].replace({"United States of America": "US", "United States": "US"})
     print(candidate_df.shape)
     candidate_df = \
-    candidate_df.sort_values('user_followers_count', ascending=False).drop_duplicates(['user_name', 'tweet'])[
-        ['user_id', 'tweet', 'country']]
+        candidate_df.sort_values('user_followers_count', ascending=False).drop_duplicates(['user_name', 'tweet'])[
+            ['user_id', 'tweet', 'country', 'likes', 'retweet_count']]
     print(candidate_df.shape)
     candidate_df = candidate_df.dropna().loc[candidate_df.country == 'US']
     print(candidate_df.shape)
@@ -53,3 +53,4 @@ biden_tweets.to_csv('biden_US_cleaned.csv', index=False)
 trump_tweets = ready_data(trump_df)
 print(trump_tweets.shape)
 trump_tweets.to_csv('trump_US_cleaned.csv', index=False)
+print("Data is clean and saved.")
