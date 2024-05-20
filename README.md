@@ -12,7 +12,13 @@ The output of this step is "biden_US_cleaned.csv" and "trump_US_cleaned.csv"
 
 Code of this section is in predictionClass.ipynb
 
-It's a notebook, run cell by cell. 
+It's a notebook, you can run it cell by cell. 
 
 # Third Step: Polarization:
 
+Code of this section is in 2 file separately for each candidate.
+
+biden_final.ipynb For candidate biden 
+trump_final.ipynb For candidate biden
+
+It's a notebook, you can run it cell by cell. 
